@@ -1,22 +1,33 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
-using UnityEngine.InputSystem;         // add this for Input being able 
+using UnityEngine.InputSystem;
+using Debug = UnityEngine.Debug; // add this for Input being able 
 
 public class PlayerController : MonoBehaviour
 {
     
     [SerializeField] private float m_speed = 1f;
-    private Rigidbody m_playerRigidbody;
+    private Rigidbody m_playerRigidbody; 
     
     private float m_movementX;
     private float m_movementY;
+
+    private int m_collectablesTotalCount;
+    private int m_collectablesCounter;
+
+    private Stopwatch m_stopwatch; 
     
     // Start is called before the first frame update
     void Start()
     {
         m_playerRigidbody = GetComponent<Rigidbody>();       // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player). If so, it will add it to the Variable m_playerRigidbody  
+
+        m_collectablesTotalCount = m_collectablesCounter = GameObject.FindGameObjectsWithTag("Collectable").Length;
+        
+        m_stopwatch = Stopwatch.StartNew();
     }
 
 
@@ -41,6 +52,32 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Collectable"))
         {
             other.gameObject.SetActive(false);
+
+            m_collectablesCounter--;
+            if (m_collectablesCounter == 0)
+            {
+                Debug.Log("YOU WIN! CONGRATULATIONS!");
+                Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
+                
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.ExitPlaymode();           
+#endif  
+            }
+            else
+            {
+                Debug.Log(
+                    $"You've already found {m_collectablesTotalCount - m_collectablesCounter} of {m_collectablesTotalCount} collectables!");
+            }
+            
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("GAME OVER! MUAHAHA!");
+            
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.ExitPlaymode();           
+#endif        
+
         }
     }
 }
