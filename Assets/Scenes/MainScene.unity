@@ -1604,6 +1604,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 15
+  m_inputaction:
+    m_Name: Inputaction
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ac2abba0-ed53-4f7d-9d03-f42338ab2d71
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3f084b3b-0317-420f-bfba-865a31853fcd
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Inputaction
+      m_Flags: 0
 --- !u!1 &1065833773
 GameObject:
   m_ObjectHideFlags: 0

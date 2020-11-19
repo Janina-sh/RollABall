@@ -19,9 +19,10 @@ public class PlayerController : MonoBehaviour
     private int m_collectablesCounter;
 
     private Stopwatch m_stopwatch;
+
+///// [SerializeField] private InputAction m_inputaction;
 ////private float m_localScaleMax;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         m_playerRigidbody = GetComponent<Rigidbody>();       // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player). If so, it will add it to the Variable m_playerRigidbody  
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         m_collectablesTotalCount = m_collectablesCounter = GameObject.FindGameObjectsWithTag("Collectable").Length;
         
         m_stopwatch = Stopwatch.StartNew();
+      
 
 ////////m_localScaleMax = 1.2f;
     }
@@ -41,13 +43,13 @@ public class PlayerController : MonoBehaviour
         m_movementX = movementVector.x;
         m_movementY = movementVector.y;
     }
-
-
+    
     private void FixedUpdate()                                     
     {
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
         
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
+        
     }
 
     private void OnTriggerEnter(Collider other) // our collectable (cube) gets deactivated when this method is called 
