@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     private int m_collectablesTotalCount;
     private int m_collectablesCounter;
 
-    private Stopwatch m_stopwatch; 
+    private Stopwatch m_stopwatch;
+////private float m_localScaleMax;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,8 @@ public class PlayerController : MonoBehaviour
         m_collectablesTotalCount = m_collectablesCounter = GameObject.FindGameObjectsWithTag("Collectable").Length;
         
         m_stopwatch = Stopwatch.StartNew();
+
+////////m_localScaleMax = 1.2f;
     }
 
 
@@ -54,22 +57,34 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
 
             m_collectablesCounter--;
+
+////////////if (transform.localScale.x >= m_localScaleMax)
+////////////{
+/////////////////gameObject.transform.localScale = m_localScaleMax;
+////////////}
+            
+            //increase size of player when colliding with collectable
+            gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
+
+
             if (m_collectablesCounter == 0)
-            {
-                Debug.Log("YOU WIN! CONGRATULATIONS!");
-                Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
+        {
+            Debug.Log("YOU WIN! CONGRATULATIONS!");
+            Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
                 
 #if UNITY_EDITOR
-                UnityEditor.EditorApplication.ExitPlaymode();           
+            UnityEditor.EditorApplication.ExitPlaymode();           
 #endif  
-            }
-            else
-            {
-                Debug.Log(
-                    $"You've already found {m_collectablesTotalCount - m_collectablesCounter} of {m_collectablesTotalCount} collectables!");
-            }
-            
         }
+        else
+        {
+            Debug.Log(
+                $"You've already found {m_collectablesTotalCount - m_collectablesCounter} of {m_collectablesTotalCount} collectables!");
+        }
+        }
+        
+        
+
         else if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("GAME OVER! MUAHAHA!");
@@ -79,5 +94,19 @@ public class PlayerController : MonoBehaviour
 #endif        
 
         }
+
+        //our toxic collectable gets deactivated when this method is called 
+        if (other.gameObject.CompareTag("Toxic"))
+        {
+            other.gameObject.SetActive(false);
+            Debug.Log("NOO, UGH, Doesn't taste good!");
+
+        //decrease size of player when colliding with collectable
+        gameObject.transform.localScale += new Vector3(-.1f, -.1f, -.1f);
+        }
+
+       //////////////if (gameObject.transform.localScale = m_localScaleMax)
+        
+
     }
 }

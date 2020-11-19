@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01491c6b-d213-46d8-a984-94a12dffcfef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
@@ -58,7 +57,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -91,6 +90,8 @@
       <updated>1604781451949</updated>
       <workItem from="1604781462427" duration="8307000" />
       <workItem from="1605354773347" duration="6863000" />
+      <workItem from="1605786662858" duration="6770000" />
+      <workItem from="1605794075199" duration="5705000" />
     </task>
     <servers />
   </component>
@@ -115,9 +116,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2456" y="367" key="SettingsEditor" timestamp="1605357098013">
-      <screen x="1680" y="23" width="2560" height="1417" />
+    <state x="509" y="272" key="SettingsEditor" timestamp="1605802124680">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
+    <state x="509" y="272" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605802124680" />
     <state x="2456" y="367" key="SettingsEditor/1680.23.2560.1417/0.23.1680.1027@1680.23.2560.1417" timestamp="1605357098013" />
   </component>
 </project>
