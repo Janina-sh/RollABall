@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private float m_localScaleMax;
     private float m_localScaleMin;
 
+    private float m_speedIncrease;
+
     
     
     void Start()
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
         
         m_localScaleMax = 1.3f; 
         m_localScaleMin = 0.7f;
+        m_speedIncrease = 25f;
     }
 
     
@@ -58,7 +61,6 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
         
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
-        
     }
 
     
@@ -77,6 +79,7 @@ public class PlayerController : MonoBehaviour
             if (gameObject.transform.localScale.x < m_localScaleMax)
             {
                 gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
+
             }
 
 

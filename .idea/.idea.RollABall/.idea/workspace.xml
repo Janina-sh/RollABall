@@ -21,11 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="01491c6b-d213-46d8-a984-94a12dffcfef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Collectable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Collectable.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enemy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enemy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/EnemyChasing.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/EnemyChasing.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ground.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Toxic.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Toxic.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/HelloWorld.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PatrollingEnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PatrollingEnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
@@ -95,7 +99,8 @@
       <workItem from="1605786662858" duration="6770000" />
       <workItem from="1605794075199" duration="5705000" />
       <workItem from="1605817984008" duration="3166000" />
-      <workItem from="1605972662405" duration="4774000" />
+      <workItem from="1605972662405" duration="4848000" />
+      <workItem from="1606044635102" duration="4885000" />
     </task>
     <servers />
   </component>
