@@ -10,6 +10,12 @@
           <e p="PatrollingEnemyController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
         </e>
+        <e p="Scripts 2" t="Include">
+          <e p="EnemyController.cs" t="Include" />
+          <e p="HelloWorld.cs" t="Include" />
+          <e p="PatrollingEnemyController.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
