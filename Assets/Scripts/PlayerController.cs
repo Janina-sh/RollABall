@@ -5,6 +5,7 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Debug = UnityEngine.Debug; // add this for Input being able 
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private int m_collectablesCounter;
 
     private Stopwatch m_stopwatch;
+
+    public Text scoreText;
+    public GameObject gameOverText;
     
     private float m_localScaleMax;
     private float m_localScaleMin;
@@ -35,6 +39,8 @@ public class PlayerController : MonoBehaviour
         
        
         m_collectablesTotalCount = m_collectablesCounter = GameObject.FindGameObjectsWithTag("Collectable").Length;
+        scoreText.text = "There are " + m_collectablesTotalCount.ToString() + " christmas balls to collect! "; 
+                         
         
         m_stopwatch = Stopwatch.StartNew();
         
@@ -73,8 +79,10 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
 
             m_collectablesCounter--;
+            scoreText.text = m_collectablesCounter.ToString() + " christmas balls to go! ";
 
-            
+
+
             //increase size of playersphere until max-value
             if (gameObject.transform.localScale.x < m_localScaleMax)
             {
@@ -86,11 +94,13 @@ public class PlayerController : MonoBehaviour
             if (m_collectablesCounter == 0)
             {
             Debug.Log("YOU WIN! CONGRATULATIONS!");
+            gameOverText.SetActive(true);
+            StartCoroutine(waitALittleBit());
+            
             Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
+            
                 
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.ExitPlaymode();           
-            #endif  
+           
             }
             
             else
@@ -104,9 +114,8 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("GAME OVER! MUAHAHA!");
-            
-            #if UNITY_EDITOR
-                UnityEditor.EditorApplication.ExitPlaymode();           
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.ExitPlaymode();           
             #endif
         }
 
@@ -124,4 +133,14 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    public IEnumerator waitALittleBit()
+    {
+        yield return  new WaitForSeconds(5);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();           
+#endif  
+    }
+    
+
 }
