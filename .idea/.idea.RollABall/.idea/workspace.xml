@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01491c6b-d213-46d8-a984-94a12dffcfef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PatrollingEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -43,6 +44,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PatrollingEnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +97,17 @@
       <workItem from="1606044635102" duration="4992000" />
       <workItem from="1606249001624" duration="124000" />
       <workItem from="1606250388694" duration="200000" />
+      <workItem from="1606374525308" duration="562000" />
+      <workItem from="1607380251475" duration="1526000" />
+      <workItem from="1607426226897" duration="3205000" />
+      <workItem from="1607443957887" duration="451000" />
+      <workItem from="1607446064540" duration="260000" />
+      <workItem from="1607448768441" duration="60000" />
+      <workItem from="1607448836355" duration="3000" />
+      <workItem from="1607448845427" duration="558000" />
+      <workItem from="1607450053844" duration="359000" />
+      <workItem from="1607450864769" duration="733000" />
+      <workItem from="1607523534718" duration="686000" />
     </task>
     <servers />
   </component>
