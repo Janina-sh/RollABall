@@ -4283,7 +4283,8 @@ MonoBehaviour:
   m_speed: 15
   m_acceleration: 5
   m_speedMax: 30
-  m_slowDown: 5
+  m_slowDown: 2
+  m_speedMin: 12
   scoreText: {fileID: 1111206279}
   gameOverText: {fileID: 1631637437}
 --- !u!1 &1067066195
