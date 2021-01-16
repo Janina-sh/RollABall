@@ -76,9 +76,7 @@ public class PlayerController : MonoBehaviour
         // Beendet das spiel, falls die y-position des players  -4 ist:
         if (transform.position.y < -4)
         {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.ExitPlaymode();
-#endif
+            Application.LoadLevel(Application.loadedLevel);
         }
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement

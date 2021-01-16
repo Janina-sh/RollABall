@@ -311,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39911219}
   m_LocalRotation: {x: 0.4232849, y: -0, z: -0, w: 0.9059967}
-  m_LocalPosition: {x: 0.55, y: 9.83, z: -8.86}
+  m_LocalPosition: {x: 0.55, y: 13.06, z: -11.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -357,8 +357,8 @@ PositionConstraint:
   m_GameObject: {fileID: 39911219}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0.55, y: 9.83, z: -8.86}
-  m_TranslationOffset: {x: 0.55, y: 5.013, z: -8.86}
+  m_TranslationAtRest: {x: 0.55, y: 13.06, z: -11.56}
+  m_TranslationOffset: {x: 0.55, y: 8.243, z: -11.56}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -3813,6 +3813,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 15
+  m_acceleration: 5
+  m_speedMax: 30
+  m_slowDown: 5
+  m_speedMin: 10
   scoreText: {fileID: 1111206279}
   gameOverText: {fileID: 1631637437}
 --- !u!1 &1066630645
