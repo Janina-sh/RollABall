@@ -10,7 +10,12 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     
-    [SerializeField] private float m_speed = 1f;
+    [SerializeField] private float m_speed = 1f;          //Current Speed
+    [SerializeField] private float m_acceleration = 5f;   //Beschleunigung
+    [SerializeField] private float m_speedMax = 30f;      //Max Speed
+    
+    [SerializeField] private float m_slowDown = 5f;       //Entschleunigung
+
     private Rigidbody m_playerRigidbody; 
     
     private float m_movementX;
@@ -28,6 +33,9 @@ public class PlayerController : MonoBehaviour
     private float m_localScaleMin;
 
     private float m_speedIncrease;
+    
+    
+    
 
     
     
@@ -95,8 +103,8 @@ public class PlayerController : MonoBehaviour
             if (gameObject.transform.localScale.x < m_localScaleMax)
             {
                 gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
-
             }
+
 
 
             if (m_collectablesCounter == 0)
@@ -138,6 +146,13 @@ public class PlayerController : MonoBehaviour
                 { 
                     gameObject.transform.localScale += new Vector3(-.1f, -.1f, -.1f);
                 }
+            
+            //increase speed of playersphere when getting smaller
+            Vector3 speedIncrease = new Vector3(m_movementX, 0f, m_movementY);
+            m_speed += m_acceleration;
+            m_playerRigidbody.AddForce(speedIncrease * m_speed);   
+            if (m_speed > m_speedMax)
+                m_speed = m_speedMax;
         }
         
     }
