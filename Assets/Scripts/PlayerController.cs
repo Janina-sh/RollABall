@@ -68,9 +68,14 @@ public class PlayerController : MonoBehaviour
         m_movementX = movementVector.x;
         m_movementY = movementVector.y;
     }
-    
-    
-    
+
+    public void OnMoveVector2(Vector2 input)
+    {
+        m_movementX = input.x;
+        m_movementY = input.y;
+    }
+
+
     private void FixedUpdate()                                     
     {
         // Beendet das spiel, falls die y-position des players  -4 ist:
