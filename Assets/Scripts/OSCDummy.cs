@@ -5,7 +5,7 @@ using extOSC;
 
 public class OSCDummy : MonoBehaviour
 {
-    public string Address = "/*/touch0";
+    public string Address = "/example/1";
     public OSCReceiver Receiver;
     public PlayerController playerController; 
     
@@ -26,6 +26,6 @@ public class OSCDummy : MonoBehaviour
             Debug.Log(touch);
         }
 
-       Debug.LogFormat("Received: {0}", message);
+       //Debug.LogFormat("Received: {0}", message);
     }
 }
