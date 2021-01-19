@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Debug = UnityEngine.Debug; // add this for Input being able 
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -123,11 +124,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("YOU WIN! CONGRATULATIONS!");
             gameOverText.SetActive(true);
             StartCoroutine(waitALittleBit());
-            
-            Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
-            
+
+
                 
-           
+                Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
+
+                SceneManager.LoadScene("Level2");
+
             }
             
             else
