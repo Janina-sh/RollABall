@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01491c6b-d213-46d8-a984-94a12dffcfef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollABall/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OSCDummy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OSCDummy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extOSC/logs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extOSC/logs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +46,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PatrollingEnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/extOSC/Scripts/OSCUtilities.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OSCDummy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -119,6 +117,7 @@
       <workItem from="1610827125338" duration="135000" />
       <workItem from="1610982909470" duration="8487000" />
       <workItem from="1611005959815" duration="1710000" />
+      <workItem from="1611136717245" duration="2452000" />
     </task>
     <servers />
   </component>

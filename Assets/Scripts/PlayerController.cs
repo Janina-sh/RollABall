@@ -109,10 +109,10 @@ public class PlayerController : MonoBehaviour
                 gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
             }
             
-            //increase speed of playersphere when getting smaller
-            Vector3 speedDecrease = new Vector3(m_movementX, 0f, m_movementY);
+            //decrease speed of playersphere when getting bigger
+            //Vector3 speedDecrease = new Vector3(m_movementX, 0f, m_movementY);
             m_speed -= m_slowDown;
-            m_playerRigidbody.AddForce(speedDecrease * m_speed);   
+            //m_playerRigidbody.AddForce(speedDecrease * m_speed);   
             if (m_speed > m_speedMin)
                 m_speed = m_speedMin;
 
