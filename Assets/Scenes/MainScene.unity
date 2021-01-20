@@ -4281,8 +4281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 15
-  m_acceleration: 5
-  m_speedMax: 30
+  m_acceleration: 3
+  m_speedMax: 24
   m_slowDown: 2
   m_speedMin: 12
   scoreText: {fileID: 1111206279}

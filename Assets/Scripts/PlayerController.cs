@@ -11,10 +11,10 @@ public class PlayerController : MonoBehaviour
 {
     
     [SerializeField] private float m_speed = 1f;          //Current Speed
-    [SerializeField] private float m_acceleration = 5f;   //Beschleunigung
-    [SerializeField] private float m_speedMax = 30f;      //Max Speed
+    [SerializeField] private float m_acceleration = 3f;   //Beschleunigung
+    [SerializeField] private float m_speedMax = 20f;      //Max Speed
     
-    [SerializeField] private float m_slowDown = 5f;       //Entschleunigung
+    [SerializeField] private float m_slowDown = 3f;       //Entschleunigung
     [SerializeField] private float m_speedMin = 10f;      //Min Speed
 
     private Rigidbody m_playerRigidbody; 
@@ -104,10 +104,10 @@ public class PlayerController : MonoBehaviour
                 gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
             }
             
-            //increase speed of playersphere when getting smaller
-            Vector3 speedDecrease = new Vector3(m_movementX, 0f, m_movementY);
+            //decrease speed of playersphere when getting bigger
+            //Vector3 speedDecrease = new Vector3(m_movementX, 0f, m_movementY);
             m_speed -= m_slowDown;
-            m_playerRigidbody.AddForce(speedDecrease * m_speed);   
+            //m_playerRigidbody.AddForce(speedDecrease * m_speed);   
             if (m_speed > m_speedMin)
                 m_speed = m_speedMin;
 
@@ -154,9 +154,9 @@ public class PlayerController : MonoBehaviour
                 }
             
             //increase speed of playersphere when getting smaller
-            Vector3 speedIncrease = new Vector3(m_movementX, 0f, m_movementY);
+            //Vector3 speedIncrease = new Vector3(m_movementX, 0f, m_movementY);
             m_speed += m_acceleration;
-            m_playerRigidbody.AddForce(speedIncrease * m_speed);   
+            //m_playerRigidbody.AddForce(speedIncrease * m_speed);   
             if (m_speed > m_speedMax)
                 m_speed = m_speedMax;
         }
