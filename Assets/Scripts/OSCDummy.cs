@@ -18,9 +18,9 @@ public class OSCDummy : MonoBehaviour
     private void ReceivedMessage(OSCMessage message)
     {
         Vector2 touch;
-        Debug.Log(message.ToVector2Double(out touch));
+        Debug.Log(message.ToVector2(out touch));
 
-        if (message.ToVector2Double(out touch) == true)
+        if (message.ToVector2(out touch) == true)
         {
             playerController.OnMoveVector2(touch); 
             Debug.Log(touch);
