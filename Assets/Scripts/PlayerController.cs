@@ -170,11 +170,7 @@ public class PlayerController : MonoBehaviour
     //load Level2 when won
     public IEnumerator waitALittleBit()
     {
-        yield return  new WaitForSeconds(5);
-/*#if UNITY_EDITOR
-        UnityEditor.EditorApplication.ExitPlaymode();           
-#endif  
-*/
+        yield return  new WaitForSeconds(3);
         SceneManager.LoadScene("Level2");
         
     }
