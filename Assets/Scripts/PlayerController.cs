@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
         m_localScaleMax = 1.3f; 
         m_localScaleMin = 0.7f;
         m_speedIncrease = 25f;
+        
     }
 
     
@@ -70,10 +71,12 @@ public class PlayerController : MonoBehaviour
         m_movementY = movementVector.y;
     }
     
-    
+     
     
     private void FixedUpdate()                                     
     {
+
+
         // Beendet das spiel, falls die y-position des players  -4 ist:
         if (transform.position.y < -4)
         {
