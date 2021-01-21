@@ -9,4 +9,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();           
+#endif 
+    }
 }
