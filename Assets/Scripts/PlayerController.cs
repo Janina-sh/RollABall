@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         // If so, it will add it to the Variable m_playerRigidbody  
         m_playerRigidbody = GetComponent<Rigidbody>();
         
-       
+        
         m_collectablesTotalCount = m_collectablesCounter = GameObject.FindGameObjectsWithTag("Collectable").Length;
         scoreText.text = "There are " + m_collectablesTotalCount.ToString() + " christmas balls to collect! "; 
                          
