@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Debug = UnityEngine.Debug; // add this for Input being able 
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -163,12 +164,16 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    //load Level2 when won
     public IEnumerator waitALittleBit()
     {
         yield return  new WaitForSeconds(5);
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
         UnityEditor.EditorApplication.ExitPlaymode();           
 #endif  
+*/
+        SceneManager.LoadScene("Level2");
+        
     }
     
 
