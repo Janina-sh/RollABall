@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
         m_localScaleMin = 0.7f;
         m_speedIncrease = 25f;
         
+        
     }
 
     
@@ -170,8 +171,21 @@ public class PlayerController : MonoBehaviour
     //load Level2 when won
     public IEnumerator waitALittleBit()
     {
-        yield return  new WaitForSeconds(3);
-        SceneManager.LoadScene("Level2");
+        yield return  new WaitForSeconds(4);
+        //SceneManager.LoadScene("Level2");
+        
+       Scene currentScene = SceneManager.GetActiveScene ();
+       string sceneName = currentScene.name;
+        
+        if (sceneName == "MainScene") 
+         {
+             SceneManager.LoadScene("Level2");
+         }
+         else if (sceneName == "Level2")
+         {
+             SceneManager.LoadScene("Menu");
+         }
+         
         
     }
     

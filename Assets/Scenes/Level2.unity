@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_slowDown: 5
   m_speedMin: 10
   scoreText: {fileID: 1075196224}
-  gameOverText: {fileID: 0}
+  gameOverText: {fileID: 1482801476}
 --- !u!1 &1066630645
 GameObject:
   m_ObjectHideFlags: 0
