@@ -55,10 +55,9 @@ public class OSCDummy : MonoBehaviour
 
         if(message.ToQuaternion(out rotation))
         {
-            tmp = rotation.eulerAngles;
-
-            ground.transform.rotation = Quaternion.Euler(-tmp.x,tmp.z,-tmp.y);
-
+            //SEB: This should only pass a message to your GroundController . 
+            // The GroundController needs to implement the rotation/interpolation behavior.
+            ground.GetComponent<GroundController>().SetTargetRotation(rotation);
             Debug.Log(rotation);
         }
         
