@@ -377,10 +377,10 @@ namespace extOSC
 
 		//		return true;
 		//	}
-			
+
 		//	value = Vector2.zero;
 		//	return false;
-			
+
 		//}
 
 
@@ -417,6 +417,8 @@ namespace extOSC
 		//	return false;
 		//}
 
+
+
 		public static bool ToVector3(this OSCMessage message, out Vector3 value, bool force = false)
 		{
 			var values = message.FindValues(OSCValueType.Float);
@@ -450,6 +452,8 @@ namespace extOSC
 			return false;
 		}
 
+
+
 		public static bool ToVector4(this OSCMessage message, out Vector4 value, bool force = false)
 		{
 			var values = message.FindValues(OSCValueType.Float);
@@ -460,36 +464,39 @@ namespace extOSC
 				var thirdValue = values[2];
 				var fourthValue = values[3];
 
-				value = new Vector4(firstValue.FloatValue, secondValue.FloatValue, thirdValue.FloatValue,
+				value = new Vector4(firstValue.FloatValue * -1, secondValue.FloatValue, thirdValue.FloatValue * -1,
 									fourthValue.FloatValue);
 
 				return true;
 			}
 
-			if (force)
-			{
-				if (message.ToVector2(out var vector2))
-				{
-					value = vector2;
-					return true;
-				}
+			//if (force)
+			//{
+			//	if (message.ToVector2(out var vector2))
+			//	{
+			//		value = vector2;
+			//		return true;
+			//	}
 
-				if (message.ToVector3(out var vector3))
-				{
-					value = vector3;
-					return true;
-				}
-			}
+			//	if (message.ToVector3(out var vector3))
+			//	{
+			//		value = vector3;
+			//		return true;
+			//	}
+			//}
 
 			value = Vector4.zero;
 			return false;
 		}
 
+
+
 		public static bool ToQuaternion(this OSCMessage message, out Quaternion value)
 		{
 			if (message.ToVector4(out var vector4))
 			{
-				value = new Quaternion(vector4.x, vector4.y, vector4.z, vector4.w);
+		
+			value = new Quaternion(vector4.x, vector4.y, vector4.z, vector4.w);
 				return true;
 			}
 

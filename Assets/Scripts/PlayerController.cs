@@ -59,7 +59,12 @@ public class PlayerController : MonoBehaviour
         m_speedIncrease = 25f;
     }
 
-    
+    internal void OnMoveVector2(Quaternion rotation)
+    {
+        throw new NotImplementedException();
+    }
+
+
 
     // When a user input happens, we do the Vector2 movement by storing the input values in the variables
     private void OnMove(InputValue inputValue)               
@@ -74,6 +79,12 @@ public class PlayerController : MonoBehaviour
     {
         m_movementX = input.x;
         m_movementY = input.y;
+    }
+
+    public void OnMoveVector4(Vector4 input)
+    {
+        m_movementX = input.x;
+        m_movementY = input.z;
     }
 
 
