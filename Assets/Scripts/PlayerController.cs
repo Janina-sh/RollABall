@@ -38,9 +38,6 @@ public class PlayerController : MonoBehaviour
     
     
     
-
-    
-    
     void Start()
     {
         // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player).
@@ -57,8 +54,6 @@ public class PlayerController : MonoBehaviour
         m_localScaleMax = 1.3f; 
         m_localScaleMin = 0.7f;
         m_speedIncrease = 25f;
-        
-        
     }
 
     
@@ -87,6 +82,9 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
         
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
+        
+        
+        
     }
 
     
@@ -100,23 +98,6 @@ public class PlayerController : MonoBehaviour
 
             m_collectablesCounter--;
             scoreText.text = m_collectablesCounter.ToString() + " christmas balls to go! ";
-
-
-
-            //increase size of playersphere until max-value
-            if (gameObject.transform.localScale.x < m_localScaleMax)
-            {
-                gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
-            }
-            
-            //decrease speed of playersphere when getting bigger
-            
-            m_speed -= m_slowDown;
-               
-            if (m_speed > m_speedMin)
-                m_speed = m_speedMin;
-
-
 
             if (m_collectablesCounter == 0)
             {
@@ -166,6 +147,24 @@ public class PlayerController : MonoBehaviour
                 m_speed = m_speedMax;
         }
         
+        //our Bigger collectable gets deactivated when this method is called
+        if (other.gameObject.CompareTag("Bigger"))
+        {
+            other.gameObject.SetActive(false);
+            
+            //increase size of playersphere until max-value
+            if (gameObject.transform.localScale.x < m_localScaleMax)
+            {
+                gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
+            }
+            
+            //decrease speed of playersphere when getting bigger
+            
+            m_speed -= m_slowDown;
+               
+            if (m_speed > m_speedMin)
+                m_speed = m_speedMin;
+        }
     }
 
     //load Level2 when won
@@ -189,5 +188,4 @@ public class PlayerController : MonoBehaviour
         
     }
     
-
 }
