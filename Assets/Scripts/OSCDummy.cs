@@ -46,28 +46,28 @@ public class OSCDummy : MonoBehaviour
     private void ReceivedMessage(OSCMessage message)
     {
         Vector2 touch;
-        Quaternion rotation;
+     //   Quaternion rotation;
 
         Vector3 tmp;
 
 
         //Debug.Log(message.ToVector2(out touch));
 
-        if(message.ToQuaternion(out rotation))
-        {
-            tmp = rotation.eulerAngles;
+        //if(message.ToQuaternion(out rotation))
+        //{
+        //    tmp = rotation.eulerAngles;
 
-            ground.transform.rotation = Quaternion.Euler(-tmp.x,tmp.z,-tmp.y);
+        //    ground.transform.rotation = Quaternion.Euler(-tmp.x,tmp.z,-tmp.y);
 
-            Debug.Log(rotation);
-        }
+        //    Debug.Log(rotation);
+        //}
         
 
-        //if (message.ToVector2(out touch) == true)
-        //{
-        //    playerController.OnMoveVector2(touch);
-        //    //Debug.Log(touch);
-        //}
+        if (message.ToVector2(out touch) == true)
+        {
+            playerController.OnMoveVector2(touch);
+            //Debug.Log(touch);
+        }
 
         //Debug.LogFormat("Received: {0}", message);
     }
