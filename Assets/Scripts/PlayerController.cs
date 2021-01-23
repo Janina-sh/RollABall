@@ -81,10 +81,10 @@ public class PlayerController : MonoBehaviour
         m_movementY = input.y;
     }
 
-    public void OnMoveVector4(Vector4 input)
+    public void OnMoveVector3(Vector3 input)
     {
-        m_movementX = input.x;
-        m_movementY = input.z;
+        m_movementX = input.y;
+        m_movementY = input.x;
     }
 
 

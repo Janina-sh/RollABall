@@ -43,32 +43,24 @@ public class OSCDummy : MonoBehaviour
     {
         Receiver.Bind(Address, ReceivedMessage);
     }
+  
 
     private void ReceivedMessage(OSCMessage message)
     {
-        Vector2 touch;
-        Vector4 rotation;
+        Quaternion rotation;
 
-        Vector3 tmp;
-
-
-        //Debug.Log(message.ToVector2(out touch));
-
-        if (message.ToVector4(out rotation)==true)
+        if (message.ToQuaternion(out rotation)==true)
         {
-            //tmp = rotation.eulerAngles; //changing the quaternion to euler rotation (rotation = quaternion)
 
-            //ground.transform.rotation = Quaternion.Euler(-tmp.x,tmp.z,-tmp.y); //creating a quaternion out of this euler rotation
-            //ground.GetComponent<Rigidbody>().AddTorque(-tmp.x, tmp.z, -tmp.y);
-            playerController.OnMoveVector4(rotation);
-            //Debug.Log(rotation);
+
+            Vector3 directionOSC = rotation.normalized.eulerAngles;
+
+            playerController.OnMoveVector3(directionOSC);
+
+            Debug.Log(" VECTOR4 VALUE " + rotation);
         }
 
-         if (message.ToVector2(out touch) == true)
-                {
-                    playerController.OnMoveVector2(touch);
-                     //Debug.Log(touch);
-                 }
+         
     }
 }
 //public class OSCDummy : MonoBehaviour
