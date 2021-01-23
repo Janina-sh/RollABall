@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
 
-        Vector3 movement = new Vector3(m_movementX*-1, 0f, m_movementY);     // Set like to Player movement
+        Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
         
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
     }
