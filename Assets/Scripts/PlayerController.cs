@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
 {
     
     [SerializeField] private float m_speed = 1f;          //Current Speed
-    [SerializeField] private float m_acceleration = 5f;   //Beschleunigung
-    [SerializeField] private float m_speedMax = 30f;      //Max Speed
+    [SerializeField] private float m_acceleration = 3f;   //Beschleunigung
+    [SerializeField] private float m_speedMax = 20f;      //Max Speed
     
-    [SerializeField] private float m_slowDown = 5f;       //Entschleunigung
+    [SerializeField] private float m_slowDown = 3f;       //Entschleunigung
     [SerializeField] private float m_speedMin = 10f;      //Min Speed
 
     private Rigidbody m_playerRigidbody; 
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         // If so, it will add it to the Variable m_playerRigidbody  
         m_playerRigidbody = GetComponent<Rigidbody>();
         
-       
+        
         m_collectablesTotalCount = m_collectablesCounter = GameObject.FindGameObjectsWithTag("Collectable").Length;
         scoreText.text = "There are " + m_collectablesTotalCount.ToString() + " christmas balls to collect! "; 
                          
@@ -57,12 +57,14 @@ public class PlayerController : MonoBehaviour
         m_localScaleMax = 1.3f; 
         m_localScaleMin = 0.7f;
         m_speedIncrease = 25f;
+        
+        
     }
 
-    
+
 
     // When a user input happens, we do the Vector2 movement by storing the input values in the variables
-    private void OnMove(InputValue inputValue)               
+    private void OnMove(InputValue inputValue)
     {
         Vector2 movementVector = inputValue.Get<Vector2>();
 
@@ -77,7 +79,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void FixedUpdate()                                     
+    private void FixedUpdate()
     {
         // Restartet das spiel, falls die y-position des players  -4 ist:
         if (transform.position.y < -25)
@@ -86,12 +88,11 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
-        
+
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
     }
 
-    
-    
+
     // our collectable (cube) gets deactivated when this method is called
     private void OnTriggerEnter(Collider other)  
     {
@@ -110,10 +111,10 @@ public class PlayerController : MonoBehaviour
                 gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
             }
             
-            //increase speed of playersphere when getting smaller
-            Vector3 speedDecrease = new Vector3(m_movementX, 0f, m_movementY);
+            //decrease speed of playersphere when getting bigger
+            
             m_speed -= m_slowDown;
-            m_playerRigidbody.AddForce(speedDecrease * m_speed);   
+               
             if (m_speed > m_speedMin)
                 m_speed = m_speedMin;
 
@@ -124,13 +125,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("YOU WIN! CONGRATULATIONS!");
             gameOverText.SetActive(true);
             StartCoroutine(waitALittleBit());
-
-
+            
+            Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
+            
                 
-                Debug.Log($"It took you {m_stopwatch.Elapsed} to find all {m_collectablesTotalCount} collectables.");
-
-                SceneManager.LoadScene("Level2");
-
+           
             }
             
             else
@@ -162,21 +161,34 @@ public class PlayerController : MonoBehaviour
                 }
             
             //increase speed of playersphere when getting smaller
-            Vector3 speedIncrease = new Vector3(m_movementX, 0f, m_movementY);
+           
             m_speed += m_acceleration;
-            m_playerRigidbody.AddForce(speedIncrease * m_speed);   
+               
             if (m_speed > m_speedMax)
                 m_speed = m_speedMax;
         }
         
     }
 
+    //load Level2 when won
     public IEnumerator waitALittleBit()
     {
-        yield return  new WaitForSeconds(5);
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.ExitPlaymode();           
-#endif  
+        yield return  new WaitForSeconds(4);
+        //SceneManager.LoadScene("Level2");
+        
+       Scene currentScene = SceneManager.GetActiveScene ();
+       string sceneName = currentScene.name;
+        
+        if (sceneName == "MainScene") 
+         {
+             SceneManager.LoadScene("Level2");
+         }
+         else if (sceneName == "Level2")
+         {
+             SceneManager.LoadScene("Menu");
+         }
+         
+        
     }
     
 

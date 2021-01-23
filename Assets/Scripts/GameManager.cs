@@ -8,5 +8,13 @@ public class GameManager : MonoBehaviour
     public void EnterLevel()
     {
         SceneManager.LoadScene("MainScene");
+        
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();           
+#endif 
     }
 }
