@@ -61,36 +61,38 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    
+
 
     // When a user input happens, we do the Vector2 movement by storing the input values in the variables
-    private void OnMove(InputValue inputValue)               
+    private void OnMove(InputValue inputValue)
     {
         Vector2 movementVector = inputValue.Get<Vector2>();
 
         m_movementX = movementVector.x;
         m_movementY = movementVector.y;
     }
-    
-     
-    
-    private void FixedUpdate()                                     
+
+    public void OnMoveVector2(Vector2 input)
     {
+        m_movementX = input.y;
+        m_movementY = input.x;
+    }
 
 
-        // Beendet das spiel, falls die y-position des players  -4 ist:
-        if (transform.position.y < -4)
+    private void FixedUpdate()
+    {
+        // Restartet das spiel, falls die y-position des players  -4 ist:
+        if (transform.position.y < -25)
         {
             Application.LoadLevel(Application.loadedLevel);
         }
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
-        
+
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
     }
 
-    
-    
+
     // our collectable (cube) gets deactivated when this method is called
     private void OnTriggerEnter(Collider other)  
     {
