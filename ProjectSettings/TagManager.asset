@@ -8,6 +8,7 @@ TagManager:
   - New tag
   - Enemy
   - Toxic
+  - Collider
   layers:
   - Default
   - TransparentFX

@@ -91,10 +91,6 @@ public class PlayerController : MonoBehaviour
 
         m_playerRigidbody.AddForce(movement * m_speed);// apply this Movement Vector to our Rigidbody
 
-        if (m_speed > 5) {
-            Debug.Log("FASTER");
-            FindObjectOfType<AudioManager>().Play("MovingBall");
-        }
     }
 
 
