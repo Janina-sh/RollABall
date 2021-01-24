@@ -35,7 +35,9 @@ public class PlayerController : MonoBehaviour
     private float m_localScaleMin;
 
     private float m_speedIncrease;
-    
+
+    public Transform teleportDestination_inside;
+    public Transform teleportDestination_outside;
     
     
 
@@ -107,23 +109,7 @@ public class PlayerController : MonoBehaviour
             m_collectablesCounter--;
             scoreText.text = m_collectablesCounter.ToString() + " christmas balls to go! ";
 
-
-
-            //increase size of playersphere until max-value
-            if (gameObject.transform.localScale.x < m_localScaleMax)
-            {
-                gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
-            }
             
-            //decrease speed of playersphere when getting bigger
-            
-            m_speed -= m_slowDown;
-               
-            if (m_speed > m_speedMin)
-                m_speed = m_speedMin;
-
-
-
             if (m_collectablesCounter == 0)
             {
             Debug.Log("YOU WIN! CONGRATULATIONS!");
@@ -173,6 +159,39 @@ public class PlayerController : MonoBehaviour
             if (m_speed > m_speedMax)
                 m_speed = m_speedMax;
         }
+        
+        //our Bigger Collectable gets deactivated when this method is called
+        if (other.gameObject.CompareTag("Bigger"))
+        {
+            other.gameObject.SetActive(false);
+
+            //increase size of playersphere until max-value
+            if (gameObject.transform.localScale.x < m_localScaleMax)
+            {
+                gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
+            }
+
+            //decrease speed of playersphere when getting bigger
+
+            m_speed -= m_slowDown;
+
+            if (m_speed > m_speedMin)
+                m_speed = m_speedMin;
+        }
+        
+        //Teleport
+        if (other.gameObject.CompareTag("Teleport"))
+        {
+            gameObject.transform.position = teleportDestination_inside.position;    
+        }
+        
+        if (other.gameObject.CompareTag("TeleportOutside"))
+        {
+            gameObject.transform.position = teleportDestination_outside.position;    
+        }
+
+            
+        
 
         if (other.gameObject.CompareTag("Collider"))
         {

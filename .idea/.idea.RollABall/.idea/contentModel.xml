@@ -306,13 +306,16 @@
           <e p="versions.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="HelloWorld.cs" t="Include" />
           <e p="OSCDummy.cs" t="Include" />
           <e p="PatrollingEnemyController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
         </e>
+        <e p="SoundManager.cs" t="Include" />
       </e>
       <e p="extOSC.csproj" t="IncludeRecursive" />
       <e p="extOSC.Editor.csproj" t="IncludeRecursive" />
