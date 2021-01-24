@@ -89,15 +89,23 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
 
-        m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
+        m_playerRigidbody.AddForce(movement * m_speed);// apply this Movement Vector to our Rigidbody
+
+        if (m_speed > 5) {
+            Debug.Log("FASTER");
+            FindObjectOfType<AudioManager>().Play("MovingBall");
+        }
     }
 
 
     // our collectable (cube) gets deactivated when this method is called
-    private void OnTriggerEnter(Collider other)  
+    private void OnTriggerEnter(Collider other)
     {
+
+
         if (other.gameObject.CompareTag("Collectable"))
         {
+            FindObjectOfType<AudioManager>().Play("Collect1");
             other.gameObject.SetActive(false);
 
             m_collectablesCounter--;
@@ -142,6 +150,7 @@ public class PlayerController : MonoBehaviour
         
         else if (other.gameObject.CompareTag("Enemy"))
         {
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             Debug.Log("GAME OVER! MUAHAHA!");
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.ExitPlaymode();           
@@ -151,6 +160,7 @@ public class PlayerController : MonoBehaviour
         //our toxic collectable gets deactivated when this method is called 
         if (other.gameObject.CompareTag("Toxic"))
         {
+            FindObjectOfType<AudioManager>().Play("Collect2");
             other.gameObject.SetActive(false);
             Debug.Log("NOO, UGH, Doesn't taste good!");
             
@@ -167,7 +177,14 @@ public class PlayerController : MonoBehaviour
             if (m_speed > m_speedMax)
                 m_speed = m_speedMax;
         }
-        
+
+        if (other.gameObject.CompareTag("Collider"))
+        {
+            Debug.Log("COLLISIONNNNN");
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+        }
+
+
     }
 
     //load Level2 when won
