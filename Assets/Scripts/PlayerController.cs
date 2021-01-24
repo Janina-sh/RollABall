@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
         //our toxic collectable gets deactivated when this method is called 
         if (other.gameObject.CompareTag("Toxic"))
         {
-            FindObjectOfType<AudioManager>().Play("Collect2");
+            
             other.gameObject.SetActive(false);
             Debug.Log("NOO, UGH, Doesn't taste good!");
             
@@ -163,6 +163,7 @@ public class PlayerController : MonoBehaviour
         //our Bigger Collectable gets deactivated when this method is called
         if (other.gameObject.CompareTag("Bigger"))
         {
+            FindObjectOfType<AudioManager>().Play("Collect2");
             other.gameObject.SetActive(false);
 
             //increase size of playersphere until max-value
