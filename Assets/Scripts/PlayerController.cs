@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     private float m_localScaleMin;
 
     private float m_speedIncrease;
+    public Transform teleportDestination_inside;
+    public Transform teleportDestination_outside; 
     
     
     
@@ -164,6 +166,17 @@ public class PlayerController : MonoBehaviour
                
             if (m_speed > m_speedMin)
                 m_speed = m_speedMin;
+        }
+        
+        //Teleport
+        if (other.gameObject.CompareTag("Teleport"))
+        {
+            gameObject.transform.position = teleportDestination_inside.position;
+        }
+
+        if (other.gameObject.CompareTag("TeleportOutside"))
+        {
+            gameObject.transform.position = teleportDestination_outside.position;
         }
     }
 

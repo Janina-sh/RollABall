@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -16851,6 +16851,7 @@ MonoBehaviour:
   m_speedMin: 12
   scoreText: {fileID: 1111206279}
   gameOverText: {fileID: 1631637437}
+  teleportDestination: {fileID: 0}
 --- !u!1 &1064331310
 GameObject:
   m_ObjectHideFlags: 0

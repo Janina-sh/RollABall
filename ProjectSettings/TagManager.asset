@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectable
-  - New tag
   - Enemy
   - Toxic
   - Bigger
+  - Teleport
+  - TeleportOutside
   layers:
   - Default
   - TransparentFX
