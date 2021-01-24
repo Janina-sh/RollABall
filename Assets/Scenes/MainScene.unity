@@ -2048,7 +2048,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -683, y: -459}
   m_AnchoredPosition: {x: -683, y: -425}
   m_SizeDelta: {x: 7774, y: 2070}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2372,7 +2371,6 @@ GameObject:
   - component: {fileID: 105103799}
   m_Layer: 0
   m_Name: Ice-Cubes (5)
-  m_TagString: Toxic
   m_TagString: Bigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2450,7 +2448,6 @@ Transform:
   m_LocalScale: {x: 4.00072, y: 4.00072, z: 4.00072}
   m_Children: []
   m_Father: {fileID: 939461493}
-  m_RootOrder: 4
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -37.386, z: 0}
 --- !u!1 &108298953

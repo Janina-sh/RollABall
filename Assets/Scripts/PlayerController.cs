@@ -40,9 +40,6 @@ public class PlayerController : MonoBehaviour
     
     
     
-
-    
-    
     void Start()
     {
         // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player).
@@ -88,14 +85,17 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
+<<<<<<< HEAD
 
         m_playerRigidbody.AddForce(movement * m_speed);// apply this Movement Vector to our Rigidbody
 
+=======
         
         m_playerRigidbody.AddForce(movement * m_speed);                // apply this Movement Vector to our Rigidbody
         
         
         
+>>>>>>> janina/jump-test
     }
 
 
@@ -161,6 +161,7 @@ public class PlayerController : MonoBehaviour
             if (m_speed > m_speedMax)
                 m_speed = m_speedMax;
         }
+<<<<<<< HEAD
 
         if (other.gameObject.CompareTag("Collider"))
         {
@@ -169,6 +170,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
+=======
         
         //our Bigger collectable gets deactivated when this method is called
         if (other.gameObject.CompareTag("Bigger"))
@@ -199,6 +201,7 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.position = teleportDestination_outside.position;
         }
+>>>>>>> janina/jump-test
     }
 
     //load Level2 when won
@@ -222,5 +225,4 @@ public class PlayerController : MonoBehaviour
         
     }
     
-
 }
