@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     private Stopwatch m_stopwatch;
 
     public Text scoreText;
-    public GameObject gameOverText;
+    public GameObject gameOverText; //LevelCompleted
+    public GameObject enemyGameOverText; //GameOvertext when Enemy hits player
     
     private float m_localScaleMax;
     private float m_localScaleMin;
@@ -134,9 +135,8 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             Debug.Log("GAME OVER! MUAHAHA!");
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.ExitPlaymode();           
-            #endif
+            StartCoroutine(EnemyGameOver());
+            enemyGameOverText.SetActive(true);
         }
 
         //our toxic collectable gets deactivated when this method is called 
@@ -219,9 +219,14 @@ public class PlayerController : MonoBehaviour
          {
              SceneManager.LoadScene("Menu");
          }
-         
-        
     }
     
+    public IEnumerator EnemyGameOver()
+    {
+        yield return new WaitForSeconds(4);
+
+        Application.LoadLevel(Application.loadedLevel);
+    }
 
 }
+
