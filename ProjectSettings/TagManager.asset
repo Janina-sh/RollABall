@@ -15,6 +15,7 @@ TagManager:
   - TeleportFalling
   - TeleportEnemy
   - TeleportBack
+  - Falling
   layers:
   - Default
   - TransparentFX
