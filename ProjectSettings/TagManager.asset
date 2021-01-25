@@ -9,6 +9,12 @@ TagManager:
   - Enemy
   - Toxic
   - Collider
+  - Bigger
+  - Teleport
+  - TeleportOutside
+  - TeleportFalling
+  - TeleportEnemy
+  - TeleportBack
   layers:
   - Default
   - TransparentFX

@@ -44,14 +44,14 @@ public class PlayerController : MonoBehaviour
     //Level3
     
     //flowerfield to plattform
-    public Transform teleportDestination_inside1;
-    public Transform teleportDestination_outside1;
+    public Transform Destination_Platform;
+    public Transform DestinationBack;
     
     //falling
-    public Transform teleportDestination_inside2;
+    public Transform Destination_Falling;
 
     //flowerfield garden to enemy platform
-    public Transform teleportDestination_inside3;
+    public Transform DestinationEnemy;
 
 
 
@@ -214,27 +214,29 @@ public class PlayerController : MonoBehaviour
         //flowerfield to plattform
         if (other.gameObject.CompareTag("Teleport"))
         {
-            gameObject.transform.position = teleportDestination_inside1.position;    
+            gameObject.transform.position = Destination_Platform.position;    
         }
         
-        if (other.gameObject.CompareTag("TeleportOutside"))
+        if (other.gameObject.CompareTag("TeleportBack"))
         {
-            gameObject.transform.position = teleportDestination_outside1.position;    
+            gameObject.transform.position = DestinationBack.position;    
         }
         
         //falling
-        if (other.gameObject.CompareTag("Teleport"))
+        if (other.gameObject.CompareTag("TeleportFalling"))
         {
-            gameObject.transform.position = teleportDestination_inside2.position;    
+            gameObject.transform.position = Destination_Falling.position;    
         }
         
         //flowerfield garden to enemy platform
-        if (other.gameObject.CompareTag("Teleport"))
+        if (other.gameObject.CompareTag("TeleportEnemy"))
         {
-            gameObject.transform.position = teleportDestination_inside3.position;    
+            gameObject.transform.position = DestinationEnemy.position;      
         }
         
 
+        
+        
         if (other.gameObject.CompareTag("Collider"))
         {
             Debug.Log("COLLISIONNNNN");
