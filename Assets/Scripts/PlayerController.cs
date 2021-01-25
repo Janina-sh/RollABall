@@ -221,8 +221,14 @@ public class PlayerController : MonoBehaviour
          }
          else if (sceneName == "Level2")
          {
-             SceneManager.LoadScene("Menu");
+             SceneManager.LoadScene("Level3");
          }
+        else if (sceneName == "Level3")
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+
     }
     
     public IEnumerator EnemyGameOver()
