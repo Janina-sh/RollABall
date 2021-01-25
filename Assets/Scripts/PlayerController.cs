@@ -37,13 +37,26 @@ public class PlayerController : MonoBehaviour
 
     private float m_speedIncrease;
 
+    //Level2
     public Transform teleportDestination_inside;
     public Transform teleportDestination_outside;
     
+    //Level3
     
+    //flowerfield to plattform
+    public Transform teleportDestination_inside1;
+    public Transform teleportDestination_outside1;
+    
+    //falling
+    public Transform teleportDestination_inside2;
 
-    
-    
+    //flowerfield garden to enemy platform
+    public Transform teleportDestination_inside3;
+
+
+
+
+
     void Start()
     {
         // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player).
@@ -184,6 +197,8 @@ public class PlayerController : MonoBehaviour
         }
         
         //Teleport
+        
+        //Level2
         if (other.gameObject.CompareTag("Teleport"))
         {
             gameObject.transform.position = teleportDestination_inside.position;    
@@ -193,8 +208,31 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.position = teleportDestination_outside.position;    
         }
-
-            
+        
+        //Level3
+        
+        //flowerfield to plattform
+        if (other.gameObject.CompareTag("Teleport"))
+        {
+            gameObject.transform.position = teleportDestination_inside1.position;    
+        }
+        
+        if (other.gameObject.CompareTag("TeleportOutside"))
+        {
+            gameObject.transform.position = teleportDestination_outside1.position;    
+        }
+        
+        //falling
+        if (other.gameObject.CompareTag("Teleport"))
+        {
+            gameObject.transform.position = teleportDestination_inside2.position;    
+        }
+        
+        //flowerfield garden to enemy platform
+        if (other.gameObject.CompareTag("Teleport"))
+        {
+            gameObject.transform.position = teleportDestination_inside3.position;    
+        }
         
 
         if (other.gameObject.CompareTag("Collider"))
@@ -221,8 +259,14 @@ public class PlayerController : MonoBehaviour
          }
          else if (sceneName == "Level2")
          {
-             SceneManager.LoadScene("Menu");
+             SceneManager.LoadScene("Level3");
          }
+        else if (sceneName == "Level3")
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+
     }
     
     public IEnumerator EnemyGameOver()
