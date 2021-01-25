@@ -49,16 +49,14 @@ public class PlayerController : MonoBehaviour
     
     //falling
     public Transform teleportDestination_inside2;
-    //public Transform teleportDestination_outside2;
-    
-    /*
-   public Transform teleportDestination_inside3;
-   public Transform teleportDestination_outside3;*/
-    
-    
 
-    
-    
+    //flowerfield garden to enemy platform
+    public Transform teleportDestination_inside3;
+
+
+
+
+
     void Start()
     {
         // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player).
@@ -225,20 +223,17 @@ public class PlayerController : MonoBehaviour
         }
         
         //falling
-        //flowerfield to plattform
         if (other.gameObject.CompareTag("Teleport"))
         {
             gameObject.transform.position = teleportDestination_inside2.position;    
         }
         
-        /*if (other.gameObject.CompareTag("TeleportOutside"))
+        //flowerfield garden to enemy platform
+        if (other.gameObject.CompareTag("Teleport"))
         {
-            gameObject.transform.position = teleportDestination_outside2.position;    
-        }*/
+            gameObject.transform.position = teleportDestination_inside3.position;    
+        }
         
-
-
-
 
         if (other.gameObject.CompareTag("Collider"))
         {
