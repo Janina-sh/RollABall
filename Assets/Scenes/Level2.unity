@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13148,7 +13148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659428032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.6, y: 4.4045362, z: -2.35}
+  m_LocalPosition: {x: -18.79, y: 4.743, z: -3.49}
   m_LocalScale: {x: 2, y: 0.02, z: 2}
   m_Children: []
   m_Father: {fileID: 2039738699}
@@ -13185,7 +13185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d413f2341ced48ae8a1f789ba217dd4, type: 2}
+  - {fileID: 2100000, guid: 5a3c59f5eab754359a1d6feb9574dbdd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23910,7 +23910,7 @@ Transform:
   m_GameObject: {fileID: 1055084053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.09, y: 4.5, z: 0.13}
-  m_LocalScale: {x: 2, y: 0.02, z: 2}
+  m_LocalScale: {x: 3.6, y: 0.02, z: 2}
   m_Children: []
   m_Father: {fileID: 1511463632}
   m_RootOrder: 0
@@ -23946,7 +23946,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d413f2341ced48ae8a1f789ba217dd4, type: 2}
+  - {fileID: 2100000, guid: 5a3c59f5eab754359a1d6feb9574dbdd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24908,7 +24908,7 @@ GameObject:
   - component: {fileID: 1106617050}
   - component: {fileID: 1106617049}
   m_Layer: 0
-  m_Name: Cube Destination
+  m_Name: Cube Destination inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24922,7 +24922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106617047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.28, y: 4.4045362, z: -2.82}
+  m_LocalPosition: {x: -15.838, y: 4.97, z: -3.97}
   m_LocalScale: {x: 1, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 1511463632}
@@ -25536,7 +25536,7 @@ GameObject:
   - component: {fileID: 1153006857}
   - component: {fileID: 1153006856}
   m_Layer: 0
-  m_Name: Cube Destination (1)
+  m_Name: Cube Destination outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25549,13 +25549,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153006854}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.36, y: 4.4045362, z: 0.34}
+  m_LocalRotation: {x: -0, y: -0, z: 0.099318184, w: 0.9950558}
+  m_LocalPosition: {x: 13, y: 5.45, z: 5.1}
   m_LocalScale: {x: 1, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 2039738699}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.400001}
 --- !u!65 &1153006856
 BoxCollider:
   m_ObjectHideFlags: 0
