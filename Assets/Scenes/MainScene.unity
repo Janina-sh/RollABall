@@ -33145,12 +33145,12 @@ MonoBehaviour:
     pitch: 0.96
     source: {fileID: 0}
   - name: MovingBall
-    clip: {fileID: 8300000, guid: dd97b48f710444ad8a98c445b3138f29, type: 3}
-    volume: 0.515
-    pitch: 0.96
+    clip: {fileID: 8300000, guid: 9389a162806f1462484729f472517739, type: 3}
+    volume: 0.634
+    pitch: 0.21
     source: {fileID: 0}
-  - name: Collect2
-    clip: {fileID: 8300000, guid: 11a7da083411e412fa2dcf48f9784cf0, type: 3}
+  - name: Collect3
+    clip: {fileID: 8300000, guid: 574a3a224dd4645968b098d4cd4ebe41, type: 3}
     volume: 0.515
     pitch: 0.96
     source: {fileID: 0}

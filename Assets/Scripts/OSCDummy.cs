@@ -65,6 +65,7 @@ public class OSCDummy : MonoBehaviour
 
         if (message.ToVector2(out touch) == true)
         {
+            FindObjectOfType<AudioManager>().Play("MovingBall");
             playerController.OnMoveVector2(touch);
             //Debug.Log(touch);
         }

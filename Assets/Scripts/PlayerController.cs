@@ -39,11 +39,11 @@ public class PlayerController : MonoBehaviour
 
     public Transform teleportDestination_inside;
     public Transform teleportDestination_outside;
-    
-    
 
-    
-    
+    bool isGrounded = true;
+
+
+
     void Start()
     {
         // Unity checks if there is a Rigidbody Component added to our Gameobject this script is attached to (here Player).
@@ -97,6 +97,10 @@ public class PlayerController : MonoBehaviour
 
         m_playerRigidbody.AddForce(movement * m_speed);// apply this Movement Vector to our Rigidbody
 
+        if (isGrounded == false)
+        {
+            FindObjectOfType<AudioManager>().Play("MovingBall");
+        }
     }
 
 
@@ -145,7 +149,7 @@ public class PlayerController : MonoBehaviour
         //our toxic collectable gets deactivated when this method is called 
         if (other.gameObject.CompareTag("Toxic"))
         {
-            
+            FindObjectOfType<AudioManager>().Play("Collect3");
             other.gameObject.SetActive(false);
             Debug.Log("NOO, UGH, Doesn't taste good!");
             
@@ -203,8 +207,31 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
         }
 
+        if (other.gameObject.CompareTag("floor"))
+        {
+           
+            FindObjectOfType<AudioManager>().Play("MovingBall");
+        }
 
     }
+
+    //make sure u replace "floor" with your gameobject name.on which player is standing
+ //void OnCollisionEnter(Collision theCollision)
+ //{
+ //       if (theCollision.gameObject.name == "floor")
+ //       {
+ //           isGrounded = true;
+ //       }
+ //   }
+
+ //       //consider when character is jumping .. it will exit collision.
+ //       void OnCollisionExit(Collision theCollision)
+ //       {
+ //           if (theCollision.gameObject.name == "floor")
+ //           {
+ //               isGrounded = false;
+ //           }
+ //       }
 
     //load Level2 when won
     public IEnumerator waitALittleBit()

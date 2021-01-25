@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9719,7 +9719,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f65063f83bfcb44d188fb4011c5505db,
         type: 3}
       propertyPath: m_Name
-      value: BASE_LEVEL2_02 (1)
+      value: floor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f65063f83bfcb44d188fb4011c5505db,
         type: 3}
@@ -10662,7 +10662,7 @@ MonoBehaviour:
   - name: MovingBall
     clip: {fileID: 8300000, guid: dd97b48f710444ad8a98c445b3138f29, type: 3}
     volume: 0.515
-    pitch: 0.96
+    pitch: 0.43
     source: {fileID: 0}
   - name: Collect2
     clip: {fileID: 8300000, guid: 11a7da083411e412fa2dcf48f9784cf0, type: 3}
@@ -35476,12 +35476,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7b4b0ed61243b41f1b759e949b88cadf,
         type: 3}
       propertyPath: m_Name
-      value: BASE_LEVEL2_01
+      value: floor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7b4b0ed61243b41f1b759e949b88cadf,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b4b0ed61243b41f1b759e949b88cadf,
+        type: 3}
+      propertyPath: m_TagString
+      value: floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b4b0ed61243b41f1b759e949b88cadf, type: 3}
@@ -42281,7 +42286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511463631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8468499, y: -4.4045362, z: -17.446514}
+  m_LocalPosition: {x: -1.6, y: -4.4045362, z: -8.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1055084054}
@@ -56324,7 +56329,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f65063f83bfcb44d188fb4011c5505db,
         type: 3}
       propertyPath: m_Name
-      value: BASE_LEVEL2_02
+      value: floor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f65063f83bfcb44d188fb4011c5505db,
         type: 3}
