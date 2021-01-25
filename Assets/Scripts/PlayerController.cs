@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         // Restartet das spiel, falls die y-position des players  -4 ist:
         if (transform.position.y < -4)
         {
-            //FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            FindObjectOfType<AudioManager>().Play("playerFall");
             Debug.Log("GAME OVER! MUAHAHA!");
             StartCoroutine(EnemyGameOver());
             enemyGameOverText.SetActive(true);
@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Collectable"))
         {
-            FindObjectOfType<AudioManager>().Play("Collect1");
+            FindObjectOfType<AudioManager>().Play("collectBall");
             other.gameObject.SetActive(false);
 
             m_collectablesCounter--;
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         
         else if (other.gameObject.CompareTag("Enemy"))
         {
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            FindObjectOfType<AudioManager>().Play("playerHit");
             Debug.Log("GAME OVER! MUAHAHA!");
             StartCoroutine(EnemyGameOver());
             enemyGameOverText.SetActive(true);
@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
         //our toxic collectable gets deactivated when this method is called 
         if (other.gameObject.CompareTag("Toxic"))
         {
-            
+            FindObjectOfType<AudioManager>().Play("collectPine");
             other.gameObject.SetActive(false);
             Debug.Log("NOO, UGH, Doesn't taste good!");
             
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
         //our Bigger Collectable gets deactivated when this method is called
         if (other.gameObject.CompareTag("Bigger"))
         {
-            FindObjectOfType<AudioManager>().Play("Collect2");
+            FindObjectOfType<AudioManager>().Play("collectSnow");
             other.gameObject.SetActive(false);
 
             //increase size of playersphere until max-value
