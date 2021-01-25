@@ -100,11 +100,13 @@ public class PlayerController : MonoBehaviour
         // Restartet das spiel, falls die y-position des players  -4 ist:
         if (transform.position.y < -4)
         {
-            FindObjectOfType<AudioManager>().Play("playerFall");
+           
             Debug.Log("GAME OVER! MUAHAHA!");
             StartCoroutine(EnemyGameOver());
             enemyGameOverText.SetActive(true);
         }
+
+
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
 
@@ -201,11 +203,13 @@ public class PlayerController : MonoBehaviour
         //Level2
         if (other.gameObject.CompareTag("Teleport"))
         {
+            FindObjectOfType<AudioManager>().Play("teleport");
             gameObject.transform.position = teleportDestination_inside.position;    
         }
         
         if (other.gameObject.CompareTag("TeleportOutside"))
         {
+            FindObjectOfType<AudioManager>().Play("teleport");
             gameObject.transform.position = teleportDestination_outside.position;    
         }
         
@@ -214,23 +218,27 @@ public class PlayerController : MonoBehaviour
         //flowerfield to plattform
         if (other.gameObject.CompareTag("Teleport"))
         {
+            FindObjectOfType<AudioManager>().Play("teleport");
             gameObject.transform.position = Destination_Platform.position;    
         }
         
         if (other.gameObject.CompareTag("TeleportBack"))
         {
+            FindObjectOfType<AudioManager>().Play("teleport");
             gameObject.transform.position = DestinationBack.position;    
         }
         
         //falling
         if (other.gameObject.CompareTag("TeleportFalling"))
         {
+            FindObjectOfType<AudioManager>().Play("teleport");
             gameObject.transform.position = Destination_Falling.position;    
         }
         
         //flowerfield garden to enemy platform
         if (other.gameObject.CompareTag("TeleportEnemy"))
         {
+            FindObjectOfType<AudioManager>().Play("teleport");
             gameObject.transform.position = DestinationEnemy.position;      
         }
         
@@ -273,6 +281,7 @@ public class PlayerController : MonoBehaviour
     
     public IEnumerator EnemyGameOver()
     {
+        
         yield return new WaitForSeconds(4);
 
         Application.LoadLevel(Application.loadedLevel);
