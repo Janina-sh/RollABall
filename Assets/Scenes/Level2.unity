@@ -5369,7 +5369,7 @@ Transform:
   - {fileID: 2054400490}
   - {fileID: 1609193185}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 80.43301, z: 0}
 --- !u!95 &37175184
 Animator:
@@ -13080,7 +13080,7 @@ Transform:
   - {fileID: 690040375}
   - {fileID: 561925064}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &619129727
 Animator:
@@ -14632,7 +14632,7 @@ Transform:
   - {fileID: 804190991}
   - {fileID: 1493352893}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 38.5, z: 0}
 --- !u!95 &718037889
 Animator:
@@ -22334,7 +22334,7 @@ Transform:
   - {fileID: 1284845295}
   - {fileID: 1495206348}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 47.395, z: 0}
 --- !u!95 &923598675
 Animator:
@@ -24790,7 +24790,7 @@ Transform:
   - {fileID: 1429813647}
   - {fileID: 1232742014}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 47.395, z: 0}
 --- !u!95 &1056436224
 Animator:
@@ -29083,7 +29083,7 @@ Transform:
   - {fileID: 677926734}
   - {fileID: 1210640865}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 38.5, z: 0}
 --- !u!95 &1259945471
 Animator:
@@ -35594,7 +35594,7 @@ Transform:
   m_LocalScale: {x: 1.1924, y: 1.1924, z: 1.1924}
   m_Children: []
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 9
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1407286188
 ParticleSystemRenderer:
@@ -47701,6 +47701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 174981889}
+  - {fileID: 1407286187}
   - {fileID: 1742895248}
   - {fileID: 619129726}
   - {fileID: 1056436223}
@@ -47709,7 +47710,6 @@ Transform:
   - {fileID: 718037888}
   - {fileID: 1931504399}
   - {fileID: 37175183}
-  - {fileID: 1407286187}
   m_Father: {fileID: 630576373}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49793,7 +49793,7 @@ Transform:
   - {fileID: 304689705}
   - {fileID: 1264064441}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1742895249
 Animator:
@@ -53102,7 +53102,7 @@ Transform:
   - {fileID: 687250645}
   - {fileID: 564345267}
   m_Father: {fileID: 1583630019}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 80.43301, z: 0}
 --- !u!95 &1931504400
 Animator:
