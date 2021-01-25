@@ -87,7 +87,10 @@ public class PlayerController : MonoBehaviour
         // Restartet das spiel, falls die y-position des players  -4 ist:
         if (transform.position.y < -25)
         {
-            Application.LoadLevel(Application.loadedLevel);
+            //FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            Debug.Log("GAME OVER! MUAHAHA!");
+            StartCoroutine(EnemyGameOver());
+            enemyGameOverText.SetActive(true);
         }
 
         Vector3 movement = new Vector3(m_movementX, 0f, m_movementY);     // Set like to Player movement
