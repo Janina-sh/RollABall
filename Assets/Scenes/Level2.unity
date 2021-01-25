@@ -7155,6 +7155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174981889}
+  - component: {fileID: 174981890}
   m_Layer: 0
   m_Name: Flowerfield
   m_TagString: Untagged
@@ -7199,6 +7200,102 @@ Transform:
   m_Father: {fileID: 1583630019}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 261.6, z: 0}
+--- !u!82 &174981890
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174981888}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 58cd04a6f4fa94148997da46c87a0710, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.012
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1.5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &179390271
 GameObject:
   m_ObjectHideFlags: 0
@@ -10255,28 +10352,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: PlayerDeath
-    clip: {fileID: 8300000, guid: 133c16e938cc24805911e36ca6ab17b5, type: 3}
+  - name: playerHit
+    clip: {fileID: 8300000, guid: f177930ddc96e420cb3cde400a881032, type: 3}
     volume: 0.515
     pitch: 0.96
     source: {fileID: 0}
-  - name: Collect1
-    clip: {fileID: 8300000, guid: 32dc70d4b90ef42168ae89e808f9c7f1, type: 3}
+  - name: playerFall
+    clip: {fileID: 8300000, guid: 60e25fa94e56448e88cb1558346c2ea7, type: 3}
     volume: 0.515
     pitch: 0.96
     source: {fileID: 0}
-  - name: Collect2
-    clip: {fileID: 8300000, guid: 11a7da083411e412fa2dcf48f9784cf0, type: 3}
+  - name: collectBall
+    clip: {fileID: 8300000, guid: 4ba7cbbf0be1d4891a21024f0c1eeaa7, type: 3}
     volume: 0.515
     pitch: 0.96
     source: {fileID: 0}
-  - name: MovingBall
-    clip: {fileID: 8300000, guid: dd97b48f710444ad8a98c445b3138f29, type: 3}
+  - name: collectSnow
+    clip: {fileID: 8300000, guid: d731e72d9f0384d3e966c39551e6bd50, type: 3}
     volume: 0.515
     pitch: 0.96
     source: {fileID: 0}
-  - name: Collect2
-    clip: {fileID: 8300000, guid: 11a7da083411e412fa2dcf48f9784cf0, type: 3}
+  - name: collectPine
+    clip: {fileID: 8300000, guid: b68e52770d9294b99bf3d4471d6fbc63, type: 3}
+    volume: 0.515
+    pitch: 0.96
+    source: {fileID: 0}
+  - name: teleport
+    clip: {fileID: 8300000, guid: 586121dfa2a7d493b8a81245457a2fcf, type: 3}
+    volume: 0.515
+    pitch: 0.96
+    source: {fileID: 0}
+  - name: playerMove
+    clip: {fileID: 8300000, guid: c74cc050c1be34b3082dee1799324636, type: 3}
     volume: 0.515
     pitch: 0.96
     source: {fileID: 0}
@@ -23568,9 +23675,9 @@ MonoBehaviour:
   teleportDestination_inside: {fileID: 1106617048}
   teleportDestination_outside: {fileID: 1153006855}
   Destination_Platform: {fileID: 0}
-  teleportDestination_outside1: {fileID: 0}
-  teleportDestination_inside2: {fileID: 0}
-  teleportDestination_inside3: {fileID: 0}
+  DestinationBack: {fileID: 0}
+  Destination_Falling: {fileID: 0}
+  DestinationEnemy: {fileID: 0}
 --- !u!1 &1055084053
 GameObject:
   m_ObjectHideFlags: 0
