@@ -20666,6 +20666,10 @@ MonoBehaviour:
   enemyGameOverText: {fileID: 66146566}
   teleportDestination_inside: {fileID: 0}
   teleportDestination_outside: {fileID: 0}
+  teleportDestination_inside1: {fileID: 0}
+  teleportDestination_outside1: {fileID: 0}
+  teleportDestination_inside2: {fileID: 0}
+  teleportDestination_inside3: {fileID: 0}
 --- !u!82 &1050116467
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21183,7 +21187,7 @@ Transform:
   - {fileID: 360483920}
   m_Father: {fileID: 1796624797}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 38.880005, z: 0}
 --- !u!65 &1112713028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27512,7 +27516,7 @@ Transform:
   - {fileID: 1272546607}
   m_Father: {fileID: 1796624797}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 177.70667, z: 0}
 --- !u!65 &1251398032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34856,7 +34860,7 @@ Transform:
   - {fileID: 610317461}
   m_Father: {fileID: 1796624797}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 2.2933335, z: 0}
 --- !u!65 &1667139303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35046,7 +35050,7 @@ Transform:
   - {fileID: 1144041845}
   m_Father: {fileID: 1796624797}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &1696924025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36891,7 +36895,7 @@ Transform:
   - {fileID: 372846832}
   m_Father: {fileID: 1796624797}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.5416667, z: 0}
 --- !u!65 &1912283181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36963,7 +36967,6 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: b09b58b7664514213bf1b42e60c5c4f1, type: 2}
   m_Animations:
-  - {fileID: 0}
   - {fileID: 7400000, guid: b09b58b7664514213bf1b42e60c5c4f1, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -37486,7 +37489,7 @@ Transform:
   - {fileID: 275120570}
   m_Father: {fileID: 1796624797}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 24.826668, z: 0}
 --- !u!65 &1986454502
 BoxCollider:
   m_ObjectHideFlags: 0
