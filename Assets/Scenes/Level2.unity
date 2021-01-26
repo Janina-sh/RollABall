@@ -9784,7 +9784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "Level 1 \nComplete"
+  m_Text: "Level 2 \nComplete"
 --- !u!222 &355764208
 CanvasRenderer:
   m_ObjectHideFlags: 0
