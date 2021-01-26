@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Restartet das spiel, falls die y-position des players  -4 ist:
-        if (transform.position.y < -4)
+        if (transform.position.y < -10)
         {
            
             Debug.Log("GAME OVER! MUAHAHA!");
@@ -245,10 +245,10 @@ public class PlayerController : MonoBehaviour
 
         
         
-        if (other.gameObject.CompareTag("Collider"))
+        if (other.gameObject.CompareTag("Falling"))
         {
-            Debug.Log("COLLISIONNNNN");
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+        
+            FindObjectOfType<AudioManager>().Play("playerFall");
         }
 
 
