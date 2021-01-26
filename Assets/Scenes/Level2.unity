@@ -5648,7 +5648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39911219}
   m_LocalRotation: {x: 0.4232849, y: -0, z: -0, w: 0.9059967}
-  m_LocalPosition: {x: 0.55, y: 13.06, z: -11.56}
+  m_LocalPosition: {x: 0.55, y: 13.059999, z: -11.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5694,7 +5694,7 @@ PositionConstraint:
   m_GameObject: {fileID: 39911219}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0.55, y: 13.06, z: -11.56}
+  m_TranslationAtRest: {x: 0.55, y: 13.059999, z: -11.56}
   m_TranslationOffset: {x: 0.55, y: 8.243, z: -11.56}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
@@ -5716,9 +5716,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b40ca686fa490408da4dac9e5b49fa1c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.267
+  m_Volume: 0.12
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7406,9 +7406,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b13bbe30d9fd34535b8e51dc73a3a75a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 58cd04a6f4fa94148997da46c87a0710, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.04
+  m_Volume: 0.265
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10647,7 +10647,7 @@ MonoBehaviour:
   sounds:
   - name: playerHit
     clip: {fileID: 8300000, guid: f177930ddc96e420cb3cde400a881032, type: 3}
-    volume: 0.515
+    volume: 0.581
     pitch: 0.96
     source: {fileID: 0}
   - name: playerFall
@@ -10657,7 +10657,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: collectBall
     clip: {fileID: 8300000, guid: 4ba7cbbf0be1d4891a21024f0c1eeaa7, type: 3}
-    volume: 0.515
+    volume: 1
     pitch: 0.96
     source: {fileID: 0}
   - name: collectSnow
@@ -10692,7 +10692,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b40ca686fa490408da4dac9e5b49fa1c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.109
+  m_Volume: 0.124
   m_Pitch: 1
   Loop: 0
   Mute: 0
